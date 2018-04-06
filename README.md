@@ -9,7 +9,7 @@ a light-weight tool for annotating structure variants located outside the coding
 
 2. go to your-directory/SVint/, and use this as your working directory
 >your-directory is where you unzip your SVint.zip
-unzip the zipped files in your-directory/SVint/data/
+>unzip the zipped files in your-directory/SVint/data/
 
 3.if you want to annotate an SV VCF from one single sample, please first put your data (presumably an SV VCF file) into your working directory (your-directory/SVint/), and then run this line: 
 perl src/SVint_anno_single.pl your-data.vcf
