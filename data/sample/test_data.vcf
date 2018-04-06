@@ -1,0 +1,27 @@
+##fileformat=VCFv4.1
+##fileDate=20150403
+##reference=http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz
+##this test data is extracted from ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/NA12878/NA12878_PacBio_MtSinai/NA12878.sorted.vcf.gz
+##phasing=None
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=INS,Description="Insertion">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END for imprecise variants">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS for imprecise variants">
+##INFO=<ID=BL,Number=1,Type=Flag,Description="A variant picked up with blasr 1.32 that wasn't detected with blasr 1.31">
+##INFO=<ID=ZU,Number=1,Type=Flag,Description="A variant whose zygosity is not indicated by the detection method used (i.e., Zygosity Unclear).">
+##INFO=<ID=NS,Number=1,Type=Integer,Description="Bit vector of Variant Calling approaches that supported this event. Each position represents the conclusion of one caller in this order: PBHoney/rawReads/blasr1.3.1; custom/rawReads/blasr1.3.1; PBHoney+ECReads+blasr1.3.1; custom+ECReads+blasr1.3.1; Chaisson+assembledContigs; custom+ECReads+blasr1.3.2; custom+rawReads+blasr1.3.2. A bit vector of 0101111, the event was supported by the second, fourth, fifth, sixth and seventh combination of mappers and event callers in that list.">
+##FILTER=<ID="lt3",Description="Called by fewer than 3 caller configurations.">
+##FILTER=<ID="PASS",Description="Variant picked up by 3 or more caller configurations of the 7 employed.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NA12878
+chr1	54179063	.	C	<INS>	.	PASS	IMPRECISE;SVTYPE=INS;END=54179064;SVLEN=+312;CIPOS=-10,10;NS=0100110;BL;ZU	GT	0/1
+chr13	111479556	.	A	<DEL>	.	lt3	IMPRECISE;SVTYPE=DEL;END=111479622;SVLEN=-66;CIPOS=-10,10;CIEND=-10,10;NS=0000100;ZU	GT	0/1
+chr13	112869104	.	G	<INS>	.	PASS	IMPRECISE;SVTYPE=INS;END=112869105;SVLEN=+84;CIPOS=-10,10;NS=1100100;ZU	GT	0/1
+chr14	23922242	.	A	<DEL>	.	PASS	IMPRECISE;SVTYPE=DEL;END=23922642;SVLEN=-400;CIPOS=-10,10;CIEND=-10,10;NS=1111111;ZU	GT	0/1
+chr14	24394576	.	C	<DEL>	.	PASS	IMPRECISE;SVTYPE=DEL;END=24394629;SVLEN=-53;CIPOS=-10,10;CIEND=-10,10;NS=0011111;BL;ZU	GT	0/1
+chr2	214457	.	C	<INS>	.	lt3	IMPRECISE;SVTYPE=INS;END=214562;CIPOS=-50,50;NS=1100000;ZU	GT	0/1
+chr2	886137	.	A	<DEL>	.	PASS	IMPRECISE;SVTYPE=DEL;END=886221;SVLEN=-84;CIPOS=-10,10;CIEND=-10,10;NS=0011101;BL;ZU	GT	0/1
+chrX	317543	.	C	<INS>	.	lt3	IMPRECISE;SVTYPE=INS;END=317661;CIPOS=-50,50;NS=0100000	GT	1|0
+chrX	2214498	.	C	<DEL>	.	PASS	IMPRECISE;SVTYPE=DEL;END=2214713;SVLEN=False;CIPOS=-50,50;CIEND=-50,50;NS=1101000;ZU	GT	0/1
+chrX	2496879	.	T	<INS>	.	PASS	IMPRECISE;SVTYPE=INS;END=2496880;SVLEN=+100;CIPOS=-10,10;NS=1100111;BL;ZU	GT	0/1
